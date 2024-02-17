@@ -11,4 +11,4 @@ embed-resources: true
 
 ## Some Examples
 
-[A map](hw/worl-map.html)
+[A map](hw/world-map.html)
