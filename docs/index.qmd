@@ -1,0 +1,14 @@
+---
+title: Graphics Portfolio
+subtitle: Data 304 -- Spring 2024
+author: A. Student
+title-block-banner: "maroon"
+format:
+  html:
+    theme: yeti
+embed-resources: true
+---
+
+## Some Examples
+
+[A map](hw/worl-map.html)

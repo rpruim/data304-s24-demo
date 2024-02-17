@@ -1,0 +1,25 @@
+---
+title: A World Map
+subtitle: Data 304 -- Spring 2024
+format:
+  html:
+    theme: yeti
+embed-resources: true
+---
+
+
+```{python}
+#| code-fold: true
+import altair as alt
+world_url = 'https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json'
+
+world = alt.topo_feature(world_url, feature='countries')
+world_map = alt.Chart(world).mark_geoshape().transform_calculate(
+  letters = "datum.properties.name.length"
+  ).encode(
+    fill = "letters:Q",
+    tooltip = ["id:N", "properties.name:N", "letters:Q"]
+    ).project(type = "naturalEarth1")
+    
+world_map.properties(width = 800, height = 300, title = "Length of country names")
+```
